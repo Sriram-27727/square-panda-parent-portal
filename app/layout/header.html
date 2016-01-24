@@ -12,10 +12,9 @@
 
         <a class="navbar-brand" href="#/home"><img src="assets/images/logo.jpg" width="200" /></a>
       </div>
-
       <div class="collapse navbar-collapse header_right" id="js-navbar-collapse">
-        <div class="top-nav">
-          <ul>
+        <div class="top-nav">          
+          <ul data-ng-if="!currentUser">
             <li ng-class="{active: $state.includes('login')}"><a href="#/login" translate="nav.login.title">Login</a></li>
             <li ng-class="{active: $state.includes('register')}"><a ng-href="#/register"  translate="nav.register.title">Register</a></li>
           </ul>
@@ -26,7 +25,10 @@
             <li ng-class="{active: $state.includes('about')}"><a ng-href="#/about"  translate="nav.about_us.title">About us</a></li>
             <li ng-class="{active: $state.includes('updates')}"><a ng-href="#/updates" translate="nav.updates.title">Updates</a></li>
             <li ng-class="{active: $state.includes('FAQs')}"><a ng-href="#/FAQs" translate="nav.faqs.title">FAQs</a></li>
-            <li ng-class="{active: $state.includes('pre-order')}"><a ng-href="#/pre-order" translate="nav.pre_order.title">Pre-Order</a></li>
+            <li ng-class="{active: $state.includes('pre-order')}"><a ng-href="#/pre-order" translate="nav.pre_order.title">Pre-Order</a>
+            </li>
+            <li ng-if="currentUser" ng-class="{active: $state.includes('pre-order')}"><a ng-href="#/dashboard">Dashboard</a></li>
+            <li ng-if="currentUser" ng-class="{active: $state.includes('pre-order')}"><a href="javascript:;" data-ng-click="logout()">Logout</a></li>
           </ul>
       </div>
       </div>

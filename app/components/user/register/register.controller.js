@@ -26,13 +26,8 @@ app.controller('registerCtrl', ['$scope', '$location', 'AuthenticationService', 
       data.firstName = register.data.firstName;
       data.lastName = register.data.lastName;
       data.email = register.data.email;
-      data.password = register.data.password;
-      //data.mobileNumber = register.data.mobileNumber;
-      //data.dateofBirth = register.data.dateofBirth;
-      //data.gender = register.data.gender;
-      data.role = "TEACHER"; //register.data.role
-      //data.grade = register.data.grade;
-      //data.schoolName = register.data.schoolName;
+      data.password = register.data.password;      
+      data.role = "TEACHER";      
       return data;   
   }
 
