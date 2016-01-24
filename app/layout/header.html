@@ -1,0 +1,35 @@
+<div class="header">
+  <div class="navbar navbar-default" role="navigation">
+    <div class="container">
+      <div class="navbar-header header_left">
+
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#js-navbar-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+        <a class="navbar-brand" href="#/home"><img src="assets/images/logo.jpg" width="200" /></a>
+      </div>
+
+      <div class="collapse navbar-collapse header_right" id="js-navbar-collapse">
+        <div class="top-nav">
+          <ul>
+            <li ng-class="{active: $state.includes('login')}"><a href="#/login" translate="nav.login.title">Login</a></li>
+            <li ng-class="{active: $state.includes('register')}"><a ng-href="#/register"  translate="nav.register.title">Register</a></li>
+          </ul>
+        </div>
+        <div class="main-nav">
+          <ul class="nav navbar-nav">
+            <li ng-class="{active: $state.includes('home')}"><a href="#/home" translate="nav.home.title">Home</a></li>
+            <li ng-class="{active: $state.includes('about')}"><a ng-href="#/about"  translate="nav.about_us.title">About us</a></li>
+            <li ng-class="{active: $state.includes('updates')}"><a ng-href="#/updates" translate="nav.updates.title">Updates</a></li>
+            <li ng-class="{active: $state.includes('FAQs')}"><a ng-href="#/FAQs" translate="nav.faqs.title">FAQs</a></li>
+            <li ng-class="{active: $state.includes('pre-order')}"><a ng-href="#/pre-order" translate="nav.pre_order.title">Pre-Order</a></li>
+          </ul>
+      </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,94 @@
+<div class="container content">
+
+<div class="col-lg-2"></div>
+<div class="col-lg-8">
+<form name="userForm" ng-submit="register.scope.submitForm(userForm.$valid)" novalidate>
+   <h2 class="form-signin-heading" data-translate="nav.register.header"></h2>
+   
+   <div class="form-group" ng-class="{ 'has-error' : (submitted && !userForm.firstName) || (userForm.firstName.$invalid && !userForm.firstName.$pristine) }">
+      <input type="text" name="firstName" class="form-control" ng-model="register.data.firstName" placeholder="{{ 'user.first_name' | translate }}"  required>
+      <p ng-show="userForm.firstName.$invalid && !userForm.firstName.$pristine" class="help-block" data-translate="user.validationMessages.first_name_require">First name is required.</p>
+   </div>
+
+   <div class="form-group" ng-class="{ 'has-error' : (submitted && !userForm.lastName) || (userForm.lastName.$invalid && !userForm.lastName.$pristine) }">
+      <input type="text" name="lastName" class="form-control" ng-model="register.data.lastName" placeholder="{{ 'user.last_name' | translate }}"  required>
+      <p ng-show="userForm.lastName.$invalid && !userForm.lastName.$pristine" class="help-block" data-translate="user.validationMessages.last_name_require">Last name is required.</p>
+   </div>
+
+   <div class="form-group" ng-class="{ 'has-error' : userForm.email.$invalid && !userForm.email.$pristine }">
+      <input type="email" name="email" class="form-control" data-ng-model="register.data.email" placeholder="{{ 'user.email' | translate }}" >
+      <p ng-show="userForm.email.$invalid && !userForm.email.$pristine" class="help-block">Enter a valid email.</p>
+   </div>
+   <div class="form-group">  
+      <input type="password" name="passsword" data-ng-model="register.data.password" class="form-control"  placeholder="{{ 'user.password' | translate }}">
+   </div>
+   <div class="form-group">    
+      <input type="password" name="confirmPassword" data-ng-model="register.data.confirmPassword" placeholder="{{ 'user.register.confirm_password' | translate }}" class="form-control">
+   </div>
+   <button type="submit" class="btn btn-primary" data-translate="common.buttons.submit">Submit</button>
+   <div class="">               
+      <a href="#/login" class="pull-right">Already registered? Sign in</a>
+   </div>
+</form>
+
+</div>
+<div class="col-lg-2"></div>
+
+  <!--<div class="col-lg-12">
+       <form name="userForm" ng-submit="register.scope.submitForm(userForm.$valid)" novalidate>
+        
+
+              <div class="form-group">                        
+                <label data-translate="user.register.mobile">Mobile Number</label>
+                <input type="text" name="mobileNumber" data-ng-model="register.data.mobileNumber" placeholder="{{ 'user.register.mobile' | translate }}" class="form-control">
+              </div>
+
+              <div class="form-group">                        
+                <label data-translate="user.register.dob">DOB</label>
+                <dob data-source="register.scope.dob"></dob>
+              </div>
+
+              
+              <div class="form-group">
+                  <label class="col-xs-3 control-label" data-translate="user.register.gender">Gender</label>
+                  <div class="col-xs-9">
+                      <div class="btn-group" data-toggle="buttons">
+                          <label class="btn btn-default">
+                              <input type="radio" name="gender" data-ng-model="register.data.gender" value="m" /> {{ 'user.male' | translate }}
+                          </label>
+                          <label class="btn btn-default">
+                              <input type="radio" name="gender" data-ng-model="register.data.gender" value="f" /> {{ 'user.female' | translate }}
+                          </label>
+                          <label class="btn btn-default">
+                              <input type="radio" name="gender" data-ng-model="register.data.gender" value="other" />  {{ 'user.other' | translate }}
+                          </label>
+                      </div>
+                  </div>
+              </div>
+            
+              
+              <div class="form-group">                        
+                <label data-translate="user.register.profile_picture">Profile Picture</label>
+                <input type="file"  class="form-control">
+              </div>
+
+              <div class="form-group">                        
+                <label data-translate="user.register.role">Role</label>
+                <input type="text" name="role" data-ng-model="register.data.role" placeholder="{{ 'user.register.role' | translate }}" class="form-control">
+              </div>
+
+              <div class="form-group">                        
+                <label data-translate="user.register.grade">Grade</label>
+                <input type="text" name="grade" data-ng-model="register.data.grade" placeholder="{{ 'user.register.grade' | translate }}" class="form-control">
+              </div>
+
+              <div class="form-group">                        
+                <label data-translate="user.register.school">School Name</label>
+                <input type="text" name="schoolName" data-ng-model="register.data.schoolName" placeholder="{{ 'user.register.school' | translate }}" class="form-control">
+              </div>
+
+              <button type="submit" class="btn btn-primary" data-translate="common.buttons.submit">Submit</button>
+        </form> 
+        </div> -->
+  </div>
+  </div>

@@ -1,0 +1,63 @@
+.header {
+  margin-bottom: 10px;
+  border-bottom: solid 3px $primary-color;
+
+  .navbar-brand{
+    padding: 0px;
+  }
+
+  .header_left, .header_right {
+  	float: left;
+  }
+
+  .header_right {
+  	.top-nav {
+  		float: right;
+  		ul, li {
+  			@extend .reset-padding-margin;
+  		}
+  		
+  		li {  			
+  			list-style: none;
+  			display: inline;
+  		}
+  	}
+  }
+  
+}
+
+.content {
+  min-height: 460px;
+}
+
+
+.footer {
+  padding-top: 19px;
+  color: $white-color;
+  border: none;
+  background-color: $primary-color;
+}
+
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 730px;
+  }
+
+  /* Remove the padding we set earlier */
+  .header,
+  .marketing,
+  .footer {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  /* Space out the masthead */
+  .header {
+    margin-bottom: 30px;
+  }
+  /* Remove the bottom border on the jumbotron for visual effect */
+  .jumbotron {
+    border-bottom: 0;
+  }
+}

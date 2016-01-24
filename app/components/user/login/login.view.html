@@ -1,0 +1,26 @@
+<div class="container content">
+  <div class="col-lg-2"></div>
+  <div class="col-lg-8">
+      <form name="signinForm" ng-submit="login.scope.submitForm(signinForm.$valid)" novalidate>
+        <h2 class="form-signin-heading" data-translate="user.login.sign_in"></h2>
+        <div class="form-group" ng-class="{ 'has-error' : (submitted && !login.data.email) || (signinForm.name.$invalid && !signinForm.name.$pristine) }">
+            <input type="email" name="email" class="form-control" ng-model="login.data.email" placeholder="{{ 'user.email' | translate }}"  required>           
+        </div>
+        <div class="form-group" ng-class="{ 'has-error' : (submitted && !login.data.password) || (signinForm.name.$invalid && !signinForm.name.$pristine) }">
+            <input type="password" name="password" class="form-control" ng-model="login.data.password" placeholder="{{ 'user.password' | translate }}"  required>           
+        </div>
+        <button class="btn btn-primary" type="submit" data-ng-disabled="!login.data.email || !login.data.password" data-translate="user.login.sign_in">Sign in</button>
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" value="remember-me" data-translate="user.login.remember_me"> Remember me
+          </label>
+        </div>
+        <div class="">
+            <a href="#/forgot_password" class="pull-left">Forgot password?</a>
+            <a href="#/register" class="pull-right">Not registered yet? Sign Up</a>
+        </div>
+        
+    </form>
+  </div>
+  <div class="col-lg-2"></div>
+</div>
