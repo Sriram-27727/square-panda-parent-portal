@@ -11,7 +11,7 @@ angular.module('app').run( ['$rootScope', '$state', '$stateParams', '$location',
       }
 
       $rootScope.$on('$locationChangeStart', function (event, next, current) {          
-          var restrictedPage = $.inArray($location.path(), ['/login', '/register']) === -1;
+          var restrictedPage = $.inArray($location.path(), ['/login', '/register', '/about', '/updates', '/FAQs', '/pre-order']) === -1;
           var loggedIn = $rootScope.globals.currentUser;
           if (restrictedPage && !loggedIn) {
               $location.path('/login');

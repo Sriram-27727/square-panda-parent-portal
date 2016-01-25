@@ -6,7 +6,7 @@ version 0.15.1.
 
 ## Project Folder Structure
 
-app/
+app/                                                                  
 ----- common/   // acts as reusable components or partials of our site
 ---------- app-directives/
 --------------- dob/
