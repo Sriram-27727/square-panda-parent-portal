@@ -13,7 +13,8 @@
         <a class="navbar-brand" href="#/home"><img src="assets/images/logo.jpg" width="200" /></a>
       </div>
       <div class="collapse navbar-collapse header_right" id="js-navbar-collapse">
-        <div class="top-nav">          
+        <div class="top-nav">
+          <a ng-if="currentUser" href="javascript:;" data-ng-click="logout()">Logout</a>
           <ul data-ng-if="!currentUser">
             <li ng-class="{active: $state.includes('login')}"><a href="#/login" translate="nav.login.title">Login</a></li>
             <li ng-class="{active: $state.includes('register')}"><a ng-href="#/register"  translate="nav.register.title">Register</a></li>
@@ -27,8 +28,7 @@
             <li ng-class="{active: $state.includes('FAQs')}"><a ng-href="#/FAQs" translate="nav.faqs.title">FAQs</a></li>
             <li ng-class="{active: $state.includes('pre-order')}"><a ng-href="#/pre-order" translate="nav.pre_order.title">Pre-Order</a>
             </li>
-            <li ng-if="currentUser" ng-class="{active: $state.includes('pre-order')}"><a ng-href="#/dashboard">Dashboard</a></li>
-            <li ng-if="currentUser" ng-class="{active: $state.includes('pre-order')}"><a href="javascript:;" data-ng-click="logout()">Logout</a></li>
+            <li ng-if="currentUser" ng-class="{active: $state.includes('dashboard')}"><a ng-href="#/dashboard">Dashboard</a></li>
           </ul>
       </div>
       </div>

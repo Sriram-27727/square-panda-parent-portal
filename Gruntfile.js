@@ -19,7 +19,8 @@ module.exports = function (grunt) {
     cdnify: 'grunt-google-cdn'
   });
 
-  grunt.loadNpmTasks('grunt-angular-i18n-finder');
+  grunt.loadNpmTasks('grunt-json-angular-translate');
+
 
   // Configurable paths for the application
   var appConfig = {
@@ -425,7 +426,7 @@ module.exports = function (grunt) {
         }, {
           expand: true,
           cwd: '.',
-          src: 'bower_components/bootstrap-sass-official/assets/fonts/bootstrap/*',
+          src: 'libs/bootstrap-sass-official/assets/fonts/bootstrap/*',
           dest: '<%= root.dist %>'
         }]
       },
@@ -467,6 +468,19 @@ module.exports = function (grunt) {
         ignoreKeys: [ "Blah", "just a var key name", "what does the fox say" ],
       },
     },
+
+    jsonAngularTranslate: {
+    jobName: {
+      options: {},
+      files: [{
+        expand: true,
+        cwd: 'app/assets/i18n',
+        src: '*.json',
+        dest: '.tmp/assets/i18',
+        ext: '.js'
+      }]
+    }
+  },
 
 
   });
@@ -517,7 +531,7 @@ module.exports = function (grunt) {
     'filerev',
     'usemin',
     'htmlmin',
-    'angular_i18n_finder'
+    'jsonAngularTranslate'
   ]);
 
   grunt.registerTask('default', [

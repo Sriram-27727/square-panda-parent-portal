@@ -7,7 +7,7 @@ version 0.15.1.
 ## Project Folder Structure
 
 app/                                                                  
------ common/   // acts as reusable components or partials of our site
+----- common/   // acts as reusable components or partials of our site  
 ---------- app-directives/
 --------------- dob/
 --------------------dob.directive.js
