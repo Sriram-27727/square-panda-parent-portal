@@ -24,6 +24,7 @@
    </div>
    <div class="form-group">    
       <input type="password" name="confirmPassword" data-ng-model="register.data.confirmPassword" placeholder="{{ 'user.register.confirm_password' | translate }}" class="form-control">
+       <p ng-show="register.data.password !== register.data.confirmPassword" class="help-block">Password mismatch.</p>
    </div>
    <button type="submit" class="btn btn-primary" data-translate="common.buttons.submit">Submit</button>
    <div class="">               
